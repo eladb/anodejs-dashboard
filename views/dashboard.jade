@@ -1,0 +1,25 @@
+!!!5
+html
+  body
+    table(border=1)
+      tr
+        th service name
+        th old service url
+        th last update time
+        th logs
+      tr
+        td [hosting process]
+        td 
+        td 
+        td
+          a(href='http://log.anodejs.org/__host__') logs
+      - services.forEach(function(svc) {
+      tr
+        td
+          a(href=svc.url)= svc.name
+        td
+          a(href=svc.altUrl)= svc.altUrl
+        td= svc.state
+        td
+          a(href=svc.logsUrl) logs
+      - });
