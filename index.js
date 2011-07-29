@@ -42,8 +42,7 @@ app.get(/.*/, function(req, res) {
       services.push({
         name: serviceName,
         url: 'http://' + serviceName + '.anodejs.org',
-        altUrl: 'http://anodejs.cloudapp.net/' + serviceName,
-        logsUrl: 'http://log.anodejs.org/' + serviceName,
+        logsUrl: 'http://anodejs-log.anodejs.org/' + serviceName,
         state: serviceState,
       });
     }
