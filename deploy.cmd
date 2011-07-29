@@ -1,1 +1,3 @@
-@pushnode dashboard
+pushd anodejs
+pushnode dash
+popd
