@@ -1,3 +1,3 @@
 pushd anodejs
-pushnode dash
+pushnode anodejs-dashboard
 popd
