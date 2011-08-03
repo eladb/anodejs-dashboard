@@ -36,14 +36,11 @@ app.get(/.*/, function(req, res) {
   files.forEach(function (file) {
     if (file.substr(file.length - 5, 5) === ".port") {
       var serviceName = file.substr(0, file.length - 5);
-      var stateFilePath = serviceMappingDir + serviceName + '.state';
-      var serviceState = readFileSyncSafe(stateFilePath);
-      console.log(serviceState);
       services.push({
         name: serviceName,
         url: 'http://' + serviceName + '.anodejs.org',
         logsUrl: 'http://anodejs-log.anodejs.org/' + serviceName,
-        state: serviceState,
+        state: '',
       });
     }
   });
